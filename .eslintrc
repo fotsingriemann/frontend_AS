@@ -1,0 +1,6 @@
+{
+  "extends": ["plugin:prettier/recommended", "standard", "react-app"],
+  "rules": {
+    "space-before-function-paren": 0
+  }
+}

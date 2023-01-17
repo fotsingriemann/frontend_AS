@@ -1,0 +1,9 @@
+{
+  "files.autoSave": "off",
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#4010a0"
+  },
+  "editor.formatOnSave": true
+}

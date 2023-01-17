@@ -1,0 +1,499 @@
+yarn run v1.22.5
+$ react-scripts --max_old_space_size=4096 build
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+yarn run v1.22.5
+$ react-scripts --max_old_space_size=4096 build
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+Compiled with warnings.
+
+./src/packages/core/base/pages/Vehicles/Groups/Groups.jsx
+  Line 10:10:  'withRouter' is defined but never used     no-unused-vars
+  Line 102:7:  'rows' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/modules/ImmobilizeModule/CommandStatus/CommandStatus.jsx
+  Line 10:37:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/modules/TrackingControls/MapSideBar/GroupTable.jsx
+  Line 10:3:  'TableSortLabel' is defined but never used  no-unused-vars
+  Line 15:8:  'getDuration' is defined but never used     no-unused-vars
+  Line 16:8:  'getFromNow' is defined but never used      no-unused-vars
+
+./src/packages/core/base/modules/TrackingControls/TrackingControls.jsx
+  Line 11:3:     'Button' is defined but never used             no-unused-vars
+  Line 957:24:   Expected '===' and instead saw '=='            eqeqeq
+  Line 958:25:   Expected '===' and instead saw '=='            eqeqeq
+  Line 959:26:   Expected '===' and instead saw '=='            eqeqeq
+  Line 959:58:   Expected '===' and instead saw '=='            eqeqeq
+  Line 960:39:   Expected '===' and instead saw '=='            eqeqeq
+  Line 971:25:   Expected '!==' and instead saw '!='            eqeqeq
+  Line 972:25:   Expected '!==' and instead saw '!='            eqeqeq
+  Line 973:25:   Expected '===' and instead saw '=='            eqeqeq
+  Line 974:26:   Expected '!==' and instead saw '!='            eqeqeq
+  Line 975:27:   Expected '!==' and instead saw '!='            eqeqeq
+  Line 976:27:   Expected '===' and instead saw '=='            eqeqeq
+  Line 977:29:   Expected '!==' and instead saw '!='            eqeqeq
+  Line 978:39:   Expected '===' and instead saw '=='            eqeqeq
+  Line 1008:26:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1009:27:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1010:28:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1010:60:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1011:41:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1022:27:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1023:27:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1024:27:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1025:28:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1026:29:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1027:29:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1028:31:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1029:41:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1079:26:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1080:27:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1081:28:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1081:60:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1082:41:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1093:27:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1094:27:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1095:27:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1096:28:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1097:29:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1098:29:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1099:31:  Expected '!==' and instead saw '!='            eqeqeq
+  Line 1100:41:  Expected '===' and instead saw '=='            eqeqeq
+  Line 1832:7:   'vehicles' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/pages/VehicleRegistrationStatus/VehicleEdit/VehicleEdit.jsx
+  Line 11:3:    'Typography' is defined but never used         no-unused-vars
+  Line 13:3:    'Dialog' is defined but never used             no-unused-vars
+  Line 14:3:    'DialogContentText' is defined but never used  no-unused-vars
+  Line 19:3:    'Button' is defined but never used             no-unused-vars
+  Line 192:36:  Expected '!==' and instead saw '!='            eqeqeq
+
+./src/packages/core/base/pages/Vehicles/Vehicles.jsx
+  Line 122:7:  Nested block is redundant  no-lone-blocks
+  Line 127:7:  Nested block is redundant  no-lone-blocks
+  Line 132:7:  Nested block is redundant  no-lone-blocks
+  Line 137:7:  Nested block is redundant  no-lone-blocks
+  Line 142:7:  Nested block is redundant  no-lone-blocks
+
+./src/packages/core/base/pages/AnalyticsDashboard/AnalyticsDashboard.jsx
+  Line 12:3:   'Button' is defined but never used    no-unused-vars
+  Line 16:10:  'useQuery' is defined but never used  no-unused-vars
+  Line 39:25:  Expected '===' and instead saw '=='   eqeqeq
+  Line 41:32:  Expected '===' and instead saw '=='   eqeqeq
+  Line 43:32:  Expected '===' and instead saw '=='   eqeqeq
+  Line 49:32:  Expected '===' and instead saw '=='   eqeqeq
+
+./src/packages/school/base/pages/Students/AddEditStudent.jsx
+  Line 12:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/school/base/pages/SchoolDashboard/SchoolDashboard.jsx
+  Line 13:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/pages/Aoi/Aoi.jsx
+  Line 13:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/pages/Routes/Routes.jsx
+  Line 13:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/common/auth/components/AuthProvider.jsx
+  Line 13:3:  'defaultTheme' is defined but never used       no-unused-vars
+  Line 14:3:  'darkTheme' is defined but never used          no-unused-vars
+  Line 15:3:  'nonWlDefaultTheme' is defined but never used  no-unused-vars
+  Line 16:3:  'nonWlDarkTheme' is defined but never used     no-unused-vars
+
+./src/packages/core/base/pages/Report/ReportTable/ReportTable.jsx
+  Line 13:8:    'Graphs' is defined but never used                  no-unused-vars
+  Line 25:3:    'Button' is defined but never used                  no-unused-vars
+  Line 226:37:  'vehicleNumber' is assigned a value but never used  no-unused-vars
+  Line 226:52:  'uniqueId' is assigned a value but never used       no-unused-vars
+
+./src/packages/core/base/modules/TrackingControls/MapSideBar/TrackingStats.jsx
+  Line 146:11:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/packages/school/base/pages/SchoolAoi/SchoolAoi.jsx
+  Line 14:3:   'Button' is defined but never used                     no-unused-vars
+  Line 146:7:  'WrappedSchoolAoi' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/modules/ImmobilizeModule/ImmobilizeModule.jsx
+  Line 155:11:  'sendCommand' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/pages/VehicleRegistrationStatus/AllVehicles.jsx
+  Line 15:8:    'Chip' is defined but never used                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  Line 136:11:  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 143:11:  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 152:47:  Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener                                                                                                                                                                                                                                      react/jsx-no-target-blank
+
+./src/packages/core/base/pages/Vehicles/Groups/GroupBulkUpload.jsx
+  Line 16:2:  'FormControl' is defined but never used       no-unused-vars
+  Line 21:2:  'Radio' is defined but never used             no-unused-vars
+  Line 22:2:  'RadioGroup' is defined but never used        no-unused-vars
+  Line 23:2:  'FormControlLabel' is defined but never used  no-unused-vars
+  Line 24:2:  'FormLabel' is defined but never used         no-unused-vars
+
+./src/packages/core/base/pages/Users/UserBulkUpload.jsx
+  Line 16:2:  'FormControl' is defined but never used       no-unused-vars
+  Line 21:2:  'Radio' is defined but never used             no-unused-vars
+  Line 22:2:  'RadioGroup' is defined but never used        no-unused-vars
+  Line 23:2:  'FormControlLabel' is defined but never used  no-unused-vars
+  Line 24:2:  'FormLabel' is defined but never used         no-unused-vars
+
+./src/packages/core/base/modules/RoutesModule/Places/Places.jsx
+  Line 16:3:   'Grid' is defined but never used                  no-unused-vars
+  Line 81:22:  'placeholder' is assigned a value but never used  no-unused-vars
+
+./src/packages/school/base/modules/SchoolBusTripModule/CreateTrip/CreateTrip.jsx
+  Line 16:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/pages/Trips/Trips.jsx
+  Line 16:3:  'ThemeProvider' is defined but never used  no-unused-vars
+  Line 20:3:  'Button' is defined but never used         no-unused-vars
+
+./src/packages/core/base/modules/VideoDashboard/VideoExplorer.jsx
+  Line 179:52:  Expected '===' and instead saw '=='  eqeqeq
+  Line 180:50:  Expected '===' and instead saw '=='  eqeqeq
+  Line 219:30:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/packages/core/base/modules/TripsDashboard/EditModal/EditModal.jsx
+  Line 17:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/pages/Account/SmsHistory.jsx
+  Line 18:10:  'MuiThemeProvider' is defined but never used  no-unused-vars
+
+./src/packages/core/base/modules/LoginForm/LoginForm.jsx
+  Line 18:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/pages/AlertsDashboard/AlertsDashboard.jsx
+  Line 18:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/school/base/pages/Insights/Insights.jsx
+  Line 1:28:    'Fragment' is defined but never used         no-unused-vars
+  Line 2:10:    'DateTimePicker' is defined but never used   no-unused-vars
+  Line 6:10:    'Query' is defined but never used            no-unused-vars
+  Line 22:3:    'Button' is defined but never used           no-unused-vars
+  Line 26:3:    'Table' is defined but never used            no-unused-vars
+  Line 27:3:    'TableHead' is defined but never used        no-unused-vars
+  Line 28:3:    'TableCell' is defined but never used        no-unused-vars
+  Line 29:3:    'TableRow' is defined but never used         no-unused-vars
+  Line 30:3:    'TableBody' is defined but never used        no-unused-vars
+  Line 193:70:  Expected '===' and instead saw '=='          eqeqeq
+  Line 199:68:  Expected '===' and instead saw '=='          eqeqeq
+  Line 204:64:  Expected '===' and instead saw '=='          eqeqeq
+  Line 218:5:   Nested block is redundant                    no-lone-blocks
+  Line 246:41:  Expected '===' and instead saw '=='          eqeqeq
+  Line 295:13:  'google' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/pages/Drivers/Drivers.jsx
+  Line 20:3:    'Tooltip' is defined but never used  no-unused-vars
+  Line 275:36:  Expected '===' and instead saw '=='  eqeqeq
+  Line 302:36:  Expected '===' and instead saw '=='  eqeqeq
+  Line 617:26:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/packages/core/base/pages/Vehicles/VehicleEdit/VehicleEdit.jsx
+  Line 21:10:  'ColorButton' is defined but never used  no-unused-vars
+
+./src/packages/core/base/modules/TripsModule/TripConfigurationPanel/TripConfigurationPanel.jsx
+  Line 21:3:   'Button' is defined but never used            no-unused-vars
+  Line 32:3:   'Modal' is defined but never used             no-unused-vars
+  Line 33:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 62:10:  'getModalStyle' is defined but never used     no-unused-vars
+  Line 206:7:  'google' is assigned a value but never used   no-unused-vars
+
+./src/packages/core/base/pages/Drivers/AddEditDriver.jsx
+  Line 21:8:    'ComboBox' is defined but never used                     no-unused-vars
+  Line 75:7:    'GET_VEHICLE_DETAIL' is assigned a value but never used  no-unused-vars
+  Line 150:7:   'GET_GROUPS' is assigned a value but never used          no-unused-vars
+  Line 292:11:  'vehicles' is assigned a value but never used            no-unused-vars
+  Line 974:13:  'driverName' is assigned a value but never used          no-unused-vars
+  Line 978:9:   'image' is assigned a value but never used               no-unused-vars
+
+./src/packages/common/root/AppShell/QueryPages.jsx
+  Line 22:19:  'getItem' is defined but never used     no-unused-vars
+  Line 81:28:  'isERP' was used before it was defined  no-use-before-define
+
+./src/packages/core/base/pages/MapDashboard/MapDashboard.jsx
+  Line 22:7:   'Analytics' is assigned a value but never used  no-unused-vars
+  Line 52:11:  'loading' is assigned a value but never used    no-unused-vars
+  Line 52:20:  'error' is assigned a value but never used      no-unused-vars
+  Line 71:26:  Expected '===' and instead saw '=='             eqeqeq
+  Line 72:28:  Expected '===' and instead saw '=='             eqeqeq
+
+./src/packages/school/base/pages/Students/Students.jsx
+  Line 23:3:   'Button' is defined but never used                    no-unused-vars
+  Line 498:7:  'WrappedStudents' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/pages/FuelDashboard/FuelDashboard.jsx
+  Line 23:8:   'InputLabel' is defined but never used                  no-unused-vars
+  Line 25:8:   'FuelIcon' is defined but never used                    no-unused-vars
+  Line 26:8:   'LineChart' is defined but never used                   no-unused-vars
+  Line 27:8:   'Line' is defined but never used                        no-unused-vars
+  Line 28:8:   'XAxis' is defined but never used                       no-unused-vars
+  Line 29:8:   'YAxis' is defined but never used                       no-unused-vars
+  Line 30:8:   'CartesianGrid' is defined but never used               no-unused-vars
+  Line 31:8:   'Tooltip' is defined but never used                     no-unused-vars
+  Line 33:31:  'COLOR_RANGE' is defined but never used                 no-unused-vars
+  Line 34:8:   'WidgetCard' is defined but never used                  no-unused-vars
+  Line 185:9:  'startLocationLink' is assigned a value but never used  no-unused-vars
+  Line 186:9:  'endLocationLink' is assigned a value but never used    no-unused-vars
+  Line 223:9:  'startLocationLink' is assigned a value but never used  no-unused-vars
+  Line 224:9:  'endLocationLink' is assigned a value but never used    no-unused-vars
+
+./src/packages/school/base/modules/SchoolAoiDashboard/SchoolAoiDashboard.jsx
+  Line 25:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/pages/Users/UserDetails/UserDetails.jsx
+  Line 25:40:  'VideoLabel' is defined but never used  no-unused-vars
+
+./src/packages/core/base/modules/TripsDashboard/TripsDashboard.jsx
+  Line 2668:13:  'sucessfulEntries' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/modules/MenuDrawer/MenuDrawer.jsx
+  Line 28:10:  'setItem' is defined but never used  no-unused-vars
+
+./src/packages/core/base/modules/TrackingControls/VehicleStats/VehicleStats.jsx
+  Line 298:7:  'isOffline' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/modules/TrackingControls/MapSideBar/VehicleList.jsx
+  Line 2:38:    'Chip' is defined but never used              no-unused-vars
+  Line 3:8:     'getFormattedTime' is defined but never used  no-unused-vars
+  Line 101:10:  'sortVehicles' is defined but never used      no-unused-vars
+
+./src/packages/core/base/modules/RoutesDashboard/RoutesDashboard.jsx
+  Line 31:3:   'Button' is defined but never used                      no-unused-vars
+  Line 160:5:  'directionsService' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/modules/TripsModule/TripsModule.jsx
+  Line 32:3:   'ADD_ROUTE' is defined but never used                    no-unused-vars
+  Line 49:10:  'getItem' is defined but never used                      no-unused-vars
+  Line 162:5:  'directionsRenderer' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/pages/AlertsDashboard/AlertsConfiguration/EnabledAlertTable/EnabledAlertTable.jsx
+  Line 332:7:  'selectedLanguage' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/modules/AoiDashboard/AoiDashboard.jsx
+  Line 33:3:    'Button' is defined but never used           no-unused-vars
+  Line 979:11:  'reason' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/pages/Report/ReportViewer.jsx
+  Line 366:13:   'classes' is assigned a value but never used  no-unused-vars
+  Line 1009:53:  Expected '!==' and instead saw '!='           eqeqeq
+
+./src/packages/core/base/modules/RoutesModule/RouteDetails/RouteDetails.jsx
+  Line 39:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/pages/Report/Graphs/GraphPlotter/GraphPlotter.jsx
+  Line 3:10:   'Query' is defined but never used                        no-unused-vars
+  Line 46:10:  'getQueryForGraphData' is defined but never used         no-unused-vars
+  Line 57:7:   'GET_SUPPORTED_PIDS' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/pages/Report/Graphs/Graphs.jsx
+  Line 3:10:   'Typography' is defined but never used          no-unused-vars
+  Line 5:8:    'TimePeriodSelector' is defined but never used  no-unused-vars
+  Line 7:8:    'Button' is defined but never used              no-unused-vars
+  Line 8:10:   'ColorButton' is defined but never used         no-unused-vars
+  Line 74:13:  'option' is assigned a value but never used     no-unused-vars
+  Line 74:21:  'from' is assigned a value but never used       no-unused-vars
+  Line 74:27:  'to' is assigned a value but never used         no-unused-vars
+
+./src/packages/core/base/pages/NewFuleDashboard/NewFuelDashboard.jsx
+  Line 3:21:   'reportStyle' is defined but never used           no-unused-vars
+  Line 33:9:   'isLoading' is assigned a value but never used    no-unused-vars
+  Line 50:17:  'errors' is assigned a value but never used       no-unused-vars
+  Line 50:25:  'loading' is assigned a value but never used      no-unused-vars
+  Line 77:8:   'handleClick' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/modules/TripsModule/TripDetails/TripDetails.jsx
+  Line 41:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/modules/NavBar/LiveAlerts.jsx
+  Line 4:3:    'Drawer' is defined but never used                                                                              no-unused-vars
+  Line 6:3:    'Card' is defined but never used                                                                                no-unused-vars
+  Line 7:3:    'Grid' is defined but never used                                                                                no-unused-vars
+  Line 8:3:    'Typography' is defined but never used                                                                          no-unused-vars
+  Line 9:3:    'withStyles' is defined but never used                                                                          no-unused-vars
+  Line 10:3:   'CardHeader' is defined but never used                                                                          no-unused-vars
+  Line 11:3:   'CardContent' is defined but never used                                                                         no-unused-vars
+  Line 12:3:   'Avatar' is defined but never used                                                                              no-unused-vars
+  Line 16:10:  'red' is defined but never used                                                                                 no-unused-vars
+  Line 39:5:   'setAlerts' is assigned a value but never used                                                                  no-unused-vars
+  Line 45:5:   'handleButtonClicked' is assigned a value but never used                                                        no-unused-vars
+  Line 46:5:   'isButtonClicked' is assigned a value but never used                                                            no-unused-vars
+  Line 47:5:   'alertsViewed' is assigned a value but never used                                                               no-unused-vars
+  Line 48:5:   'alertsViewedTrue' is assigned a value but never used                                                           no-unused-vars
+  Line 49:5:   'alertsViewedFalse' is assigned a value but never used                                                          no-unused-vars
+  Line 50:5:   'handleAlertsDrawerToggleFalse' is assigned a value but never used                                              no-unused-vars
+  Line 96:6:   React Hook React.useEffect has a missing dependency: 'props'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 98:59:  Expected '===' and instead saw '=='                                                                             eqeqeq
+
+./src/packages/core/base/pages/Report/ReportCard/ReportCard.jsx
+  Line 55:39:  'reportName' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/pages/AlertsDashboard/AlertsConfiguration/DisabledAlertTable/DisabledAlertTable.jsx
+  Line 5:27:   'useState' is defined but never used                   no-unused-vars
+  Line 38:3:   'Paper' is defined but never used                      no-unused-vars
+  Line 39:3:   'Card' is defined but never used                       no-unused-vars
+  Line 43:10:  'RowingOutlined' is defined but never used             no-unused-vars
+  Line 44:10:  'DatePicker' is defined but never used                 no-unused-vars
+  Line 45:8:   'moment' is defined but never used                     no-unused-vars
+  Line 182:5:  'selectedLanguage' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/modules/TrackingControls/MapSideBar/MapSideBar.jsx
+  Line 65:5:   'order' is assigned a value but never used              no-unused-vars
+  Line 66:5:   'handleRequestSort' is assigned a value but never used  no-unused-vars
+  Line 69:5:   'selectedGroup' is assigned a value but never used      no-unused-vars
+  Line 76:12:  'handleSelectedVehicleChange' is already defined        no-redeclare
+
+./src/packages/core/base/pages/AlertsDashboard/AlertsConfiguration/TableWrapper.jsx
+  Line 7:17:    'useQuery' is defined but never used                                                                                 no-unused-vars
+  Line 16:3:    'alertConfigs' is defined but never used                                                                             no-unused-vars
+  Line 20:8:    'VehicleStats' is defined but never used                                                                             no-unused-vars
+  Line 523:9:   'flag' is assigned a value but never used                                                                            no-unused-vars
+  Line 909:10:  'allEnabledParameter' is assigned a value but never used                                                             no-unused-vars
+  Line 909:31:  'setAllEnabledParameters' is assigned a value but never used                                                         no-unused-vars
+  Line 928:19:  'loading' is assigned a value but never used                                                                         no-unused-vars
+  Line 928:28:  'error' is assigned a value but never used                                                                           no-unused-vars
+  Line 985:6:   React Hook useEffect has a missing dependency: 'getAllParameters'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+./src/packages/core/base/modules/TripsDashboard/ConfirmationModal/ConfirmationModal.jsx
+  Line 7:29:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/modules/RoutesModule/RoutesModule.jsx
+  Line 84:5:  'directionsRenderer' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/pages/Report/DefaultReportsList.jsx
+  Line 89:23:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 96:23:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/packages/core/base/pages/Report/Graphs/GraphPlotter/Graphs/ElectricGraph.jsx
+  Line 8:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 9:3:   'FormControlLabel' is defined but never used  no-unused-vars
+  Line 10:3:  'FormGroup' is defined but never used         no-unused-vars
+  Line 11:3:  'FormLabel' is defined but never used         no-unused-vars
+  Line 12:3:  'Checkbox' is defined but never used          no-unused-vars
+  Line 68:5:  Nested block is redundant                     no-lone-blocks
+  Line 77:5:  Nested block is redundant                     no-lone-blocks
+
+./src/packages/core/base/pages/OSMap/ReplayControlPanel/ReplayControlPanel.jsx
+  Line 8:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/core/base/modules/TrackingControls/ReplayControlPanel/ReplayControlPanel.jsx
+  Line 8:3:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/common/ui/SimpleModal/SimpleModal.jsx
+  Line 8:46:  'Button' is defined but never used  no-unused-vars
+
+./src/packages/common/root/AppShell/AppShell.jsx
+  Line 95:37:  Expected '===' and instead saw '=='                      eqeqeq
+  Line 115:9:  'isAlertsDrawerOpen' is assigned a value but never used  no-unused-vars
+
+./src/packages/core/base/modules/TripsModule/TripList/TripList.jsx
+  Line 9:8:     'SearchIcon' is defined but never used        no-unused-vars
+  Line 10:8:    'getFormattedTime' is defined but never used  no-unused-vars
+  Line 11:8:    'Radio' is defined but never used             no-unused-vars
+  Line 12:8:    'RadioGroup' is defined but never used        no-unused-vars
+  Line 13:8:    'FormControlLabel' is defined but never used  no-unused-vars
+  Line 14:8:    'FormControl' is defined but never used       no-unused-vars
+  Line 15:8:    'FormLabel' is defined but never used         no-unused-vars
+  Line 16:8:    'Autocomplete' is defined but never used      no-unused-vars
+  Line 17:8:    'TextField' is defined but never used         no-unused-vars
+  Line 26:3:    'Input' is defined but never used             no-unused-vars
+  Line 27:3:    'InputAdornment' is defined but never used    no-unused-vars
+  Line 125:19:  Expected '===' and instead saw '=='           eqeqeq
+  Line 255:35:  'cursor' is assigned a value but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  665.72 KB  build/static/js/15.64fcf004.chunk.js
+  640.65 KB  build/static/js/23.73c074f4.chunk.js
+  430.95 KB  build/static/js/21.1437e95e.chunk.js
+  412.13 KB  build/static/js/22.ad1b2887.chunk.js
+  398.1 KB   build/static/js/13.59258be3.chunk.js
+  395.7 KB   build/static/js/35.305d4ea6.chunk.js
+  390.2 KB   build/static/js/24.6ae5002d.chunk.js
+  387.27 KB  build/static/js/9.2f95865e.chunk.js
+  358.14 KB  build/static/js/12.d750bd20.chunk.js
+  341.64 KB  build/static/js/14.b3f95d11.chunk.js
+  276.73 KB  build/static/js/28.be2088cb.chunk.js
+  275.04 KB  build/static/js/31.5997e9fe.chunk.js
+  236.83 KB  build/static/js/34.4d3f7b43.chunk.js
+  220.87 KB  build/static/js/8.c8a2261f.chunk.js
+  174.85 KB  build/static/js/11.55411111.chunk.js
+  162.7 KB   build/static/js/19.6e4b3ea7.chunk.js
+  145.72 KB  build/static/js/10.9deff4a5.chunk.js
+  136.17 KB  build/static/js/25.073785df.chunk.js
+  118.66 KB  build/static/js/16.5af27a8d.chunk.js
+  109.96 KB  build/static/js/27.fe8fc5d8.chunk.js
+  106.89 KB  build/static/js/29.487a9308.chunk.js
+  102.07 KB  build/static/js/26.e7a4b248.chunk.js
+  101.39 KB  build/static/js/30.e5d4a57a.chunk.js
+  96.06 KB   build/static/js/20.9941dbff.chunk.js
+  87.87 KB   build/static/js/32.be780253.chunk.js
+  87.75 KB   build/static/js/33.bf69a0f0.chunk.js
+  49.44 KB   build/static/js/37.e247bfa2.chunk.js
+  48.47 KB   build/static/js/36.7d331a50.chunk.js
+  40.98 KB   build/static/js/17.e08610e5.chunk.js
+  40.79 KB   build/static/js/18.cf64c7d5.chunk.js
+  38.74 KB   build/static/js/39.23a523f3.chunk.js
+  23.43 KB   build/static/js/40.bb23a1fd.chunk.js
+  23.35 KB   build/static/js/45.5bee9836.chunk.js
+  22.52 KB   build/static/js/38.78550be0.chunk.js
+  18.05 KB   build/static/js/41.569ad962.chunk.js
+  17.81 KB   build/static/js/44.d4b98779.chunk.js
+  10.62 KB   build/static/js/4.7a3b9a27.chunk.js
+  10.3 KB    build/static/css/22.79642684.chunk.css
+  10.03 KB   build/static/js/42.d9c8e4ed.chunk.js
+  8.01 KB    build/static/js/main.1adf0651.chunk.js
+  6.66 KB    build/static/css/13.bbd342ff.chunk.css
+  6.42 KB    build/static/js/3.2fc8dc8b.chunk.js
+  4.92 KB    build/static/js/2.7029e730.chunk.js
+  4.77 KB    build/static/js/5.238b6164.chunk.js
+  4.45 KB    build/static/js/43.583d17fe.chunk.js
+  4.15 KB    build/static/js/0.19140a72.chunk.js
+  3.4 KB     build/static/js/1.91a0be50.chunk.js
+  2.42 KB    build/static/js/47.b1bd8fca.chunk.js
+  2.12 KB    build/static/js/runtime-main.d6832b92.js
+  1.27 KB    build/static/js/48.b2ee24ff.chunk.js
+  1.06 KB    build/static/css/11.5a2f7233.chunk.css
+  1.06 KB    build/static/css/16.5a2f7233.chunk.css
+  1.06 KB    build/static/css/20.5a2f7233.chunk.css
+  621 B      build/static/css/12.bfea1e9e.chunk.css
+  516 B      build/static/css/21.521f78fb.chunk.css
+  515 B      build/static/css/24.e51e23ef.chunk.css
+  506 B      build/static/css/28.ba97d50a.chunk.css
+  506 B      build/static/css/37.ba97d50a.chunk.css
+  505 B      build/static/css/36.6c4db223.chunk.css
+  505 B      build/static/css/31.ba97d50a.chunk.css
+  393 B      build/static/css/18.1c21140e.chunk.css
+  387 B      build/static/css/17.0e2f2621.chunk.css
+  347 B      build/static/css/main.8e75d938.chunk.css
+  312 B      build/static/css/35.0fba7013.chunk.css
+  305 B      build/static/js/46.34c253ce.chunk.js
+  300 B      build/static/css/43.4afa055b.chunk.css
+  218 B      build/static/css/23.3cca4205.chunk.css
+  176 B      build/static/css/38.c4937f22.chunk.css
+  175 B      build/static/css/41.c4937f22.chunk.css
+  102 B      build/static/css/46.c01e0868.chunk.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  yarn global add serve
+  serve -s build
+
+Find out more about deployment here:
+
+  bit.ly/CRA-deploy
+
+Done in 169.16s.

@@ -1,0 +1,854 @@
+{
+  "English": {
+    "common": {
+      "darkModeLabel": "Dark Mode",
+      "liveAlertsButtonTitle": "Live Alerts",
+      "accountMenu": {
+        "accountMenuLabel": "Account",
+        "userNameLabel": "Username",
+        "logoutButtonTitle": "Logout"
+      },
+      "dateFilter": {
+        "timeRangeLabel": "Time Range",
+        "lastHour": "Last Hour",
+        "lastDay": "Last Day",
+        "lastWeek": "Last Week",
+        "lastMonth": "Last Month",
+        "customRange": "Custom Range",
+        "custom": "Custom",
+        "allTime": "All Time",
+        "timeRange": "Time Range",
+        "dateRange": "Date Range",
+        "fromDate": "From",
+        "toDate": "To"
+      },
+      "vehicleNumber": "Vehicle Number",
+      "lastTracked": "Last Tracked",
+      "chooseVehicle": "Choose Vehicle",
+      "searchVehicle": "Search Vehicle",
+      "submitButtonTitle": "Submit"
+    },
+    "mainDashboardPage": {
+      "pageTitle": "Dashboard",
+      "vehicleStatsCard": {
+        "details": {
+          "violationTooltipTitle": "Vehicles having committed an offense (overspeed, night trip, bad routes, geofencing) in the last 30 minutes",
+          "violation": "VIOLATION",
+          "tripsTooltipTitle": "Programmer trips that are currently underway",
+          "trips": "ONGOING TRIPS",
+          "parkedOut": "PARKED OUT",
+          "parkedIn": "PARKED IN",
+          "parkedOutTooltipTitle": "Vehicles not parked in the Area of interest of Eneo",
+          "parkedInTooltipTitle": "Vehicles parked in the Areas of interest of Eneo"
+        },
+        "tracking": {
+          "trackingCardTitle": "Tracking",
+          "trackingTooltipTitle": "Vehicles which have communicated in last 30 minutes",
+          "running": "RUNNING",
+          "runningTooltipTitle": "Vehicles running at more than 3 kmph",
+          "idle": "IDLE",
+          "idleTooltipTitle": "Vehicles with ignition ON and not moving",
+          "halt": "HALT",
+          "haltTooltipTitle": "Vehicles with ignition OFF and sent data in last 30 minutes",
+          "noGps": "NO GPS",
+          "noGpsTooltipTitle": "Vehicles that have sent data in last 30 minutes without a valid GPS data"
+        },
+        "nonTracking": {
+          "nonTrackingCardTitle": "Non Tracking",
+          "nonTrackingTooltipTitle": "Vehicles which have NOT communicated in last 30 minutes",
+          "offline": "OFFLINE",
+          "offlineTooltipTitle": "Vehicles which haven't sent data in last 30 minutes",
+          "noData": "NO DATA",
+          "noDataTooltipTitle": "Vehicles which haven't sent valid data since installation",
+          "deviceDead": "DEAD",
+          "deviceDeadTooltipTitle": "Offline vehicles which sent the last packet on the device secondary battery"
+        }
+      },
+      "inputFieldPlaceholder": {
+        "searchGroups": "Search Groups",
+        "searchOnlineVehicles": "Search Online Vehicles",
+        "searchNoGpsVehicles": "Search NoGPS Vehicles",
+        "searchRunningVehicles": "Search Running Vehicles",
+        "searchIdleVehicles": "Search Idle Vehicles",
+        "searchOfflineVehicles": "Search Offline Vehicles",
+        "searchHaltedVehicles": "Search Halted Vehicles",
+        "searchAllVehicles": "Search All Vehicles",
+        "searchDeviceDeadVehicles": "Search Device Dead Vehicles",
+        "searchTrackingVehicles": "Search Tracking Vehicles",
+        "searchNoDataVehicles": "Search NoData Vehicles",
+        "searchNonTrackingVehicles": "Search Non Tracking Vehicles",
+        "searchVehicles": "Search Vehicles"
+      },
+      "toggleGroupSearch": "Toggle to group search",
+      "toggleVehicleSearch": "Toggle to vehicle search",
+      "groupName": "Group Name",
+      "vehicleAssigned": "Vehicles assigned",
+      "currentTrackingInfo": {
+        "currentTrackingInfoButtonTitle": "Current TrackingInfo",
+        "currentTrackingInfoTitle": "Current Trackinfo",
+        "currentTrackingInfoTableColumn": [
+          "Vehicle No",
+          "Date & Time",
+          "Device SlNumber",
+          "Phone Number",
+          "IMEI Number",
+          "Sim Number",
+          "Vehicle Model",
+          "Current Speed",
+          "Coordinates",
+          "Location",
+          "Group(s)",
+          "Tracking Status",
+          "Battery Status"
+        ]
+      },
+      "currentSummary": {
+        "currentSummaryButtonTitle": "Current Summary",
+        "currentSummaryTitle": "Current Summary",
+        "currentSummaryTableColumn": [
+          "Vehicle Number",
+          "Distance",
+          "Start Time",
+          "Start Loc",
+          "Last Track Time",
+          "Last Track Loc",
+          "Speed",
+          "Max Speed",
+          "Avg Speed",
+          "Start Address",
+          "Last Track Address",
+          "Driver Name",
+          "Group(s)",
+          "Tracking Status",
+          "Battery Status",
+          "Unique Id"
+        ]
+      },
+      "snapToRoad": {
+        "disabled": "Snap to road is disabled",
+        "enabled": "Snap to road is enabled"
+      },
+      "trackingLiveTab": {
+        "tabBarTitle": "Tracking Live",
+        "vehicleSpeedLabel": "Speed (km/h)",
+        "lastTrackedTimeLabel": "Last tracked time",
+        "locationLabel": "Location",
+        "batteryLabel": "Battery"
+      },
+      "travelReplayTab": {
+        "tabBarTitle": "Travel Replay",
+        "durationLabel": "Choose 24 hours duration to see replay",
+        "finishReplayButtonTitle": "FINISH REPLAY",
+        "startReplayButtonTitle": "Start Replay"
+      },
+      "deviceOptionButton": {
+        "primaryDeviceButtonTitle": "Primary Device",
+        "secondaryDeviceButtonTitle": "Secondary Device"
+      }
+    },
+    "analyticsPage": {
+      "pageTitle": "Analytics Dashboard",
+      "fleetAnalyticsUsage": "Fleet Analytics & Usage"
+    },
+    "reportsPage": {
+      "pageTitle": "Reports",
+      "defaultReportsTitle": "DEFAULT REPORTS",
+      "customReportsTitle": "CUSTOM REPORTS",
+      "newCustomReportButtonTitle": "New",
+      "reportsViewPage": {
+        "searchVehiclesAndGroups": "Search Vehicles & Groups",
+        "generateReportButtonTitle": "Generate Report",
+        "resetButtonTitle": "Reset",
+        "backToReportsButtonTitle": "Back To All Reports"
+      }
+    },
+    "alertsPage": {
+      "pageTitle": "Alerts Dashboard",
+      "configurationButtonTitle": "Configurations",
+      "alertsTableColumn": [
+        "Date",
+        "Vehicle Number",
+        "Location",
+        "Value",
+        "Latitude",
+        "Longitude"
+      ],
+      "configureAlertsPage": {
+        "pageTitle": "Configure Alerts",
+        "searchVehiclesAndGroups": "Search Vehicles & Groups",
+        "enabledVehicleTabTitle": "Enabled Vehicles",
+        "disabledVehicleTabTitle": "Disabled Vehicles"
+      }
+    },
+    "mobilizePage": {
+      "pageTitle": "Immobilize / Mobilize Vehicle",
+      "mobilizeButtonTitle": "Mobilize",
+      "immobilizeButtonTitle": "Immobilize",
+      "forceMobilizeSwitch": "Force Mobilize",
+      "forceImmobilizeSwitch": "Force Immobilize",
+      "immobilizeCardTitle": "Choose Vehicle to immobilize",
+      "mobilizeCardTitle": "Choose Vehicle to mobilize",
+      "commandHistory": {
+        "commandHistoryTitle": "Command History",
+        "commandHistoryTableColumn": [
+          "Serial No.",
+          "Vehicle Number",
+          "Command",
+          "Status",
+          "Last Updated",
+          "Username"
+        ]
+      }
+    },
+    "aoiPage": {
+      "pageTitle": "Area of Interest (AoI) Dashboard",
+      "searchAoi": "Search AOI",
+      "createAoiButtonTitle": "Create AOIS",
+      "aoiTableColumn": [
+        "Area Name",
+        "Created On"
+      ],
+      "aoiDetails": {
+        "cardTitle": "AOI DETAILS",
+        "areaNameLabel": "Area name",
+        "areaTypeLabel": "Area type",
+        "createdOnLabel": "Created on"
+      },
+      "aoiCreation": {
+        "pageTitle": "AOI Creation",
+        "goBackButtonTitle": "Go Back",
+        "bulkCreationButtonTitle": "Bulk Creation",
+        "chooseGeometryLabel": "Choose geometry of AOI",
+        "markAoiLabel": "Mark AOI using",
+        "searchPlace": "Search for a Place",
+        "aoiRadiusLabel": "AOI Radius",
+        "meterLabel": "meters",
+        "viewButtonTitle": "View",
+        "saveButtonTitle": "Save",
+        "clearButtonTitle": "Clear"
+      }
+    },
+    "routesPage": {
+      "pageTitle": "Routes Dashboard",
+      "searchRoutes": "Search Routes",
+      "createRoutesButtonTitle": "Create Routes",
+      "routesTableColumn": [
+        "Route Name",
+        "Created On"
+      ],
+      "routeDetails": {
+        "cardTitle": "ROUTE DETAILS",
+        "routeNameLabel": "Route name",
+        "waypointsRegisteredLabel": "Waypoints registered",
+        "createdOnLabel": "Created on"
+      },
+      "routeCreation": {
+        "pageTitle": "Routes Creation",
+        "goBackButtonTitle": "Go Back",
+        "bulkCreationButtonTitle": "Bulk Creation",
+        "chooseRouteLabel": "Choose route using",
+        "optimizationLabel": "Optimizations",
+        "optimalRouteLabel": "Optimal Route",
+        "routeFenceLabel": "Routefence Buffer",
+        "choosePlacesLabel": "Choose Places",
+        "meterLabel": "meters",
+        "viewButtonTitle": "View",
+        "saveButtonTitle": "Save",
+        "clearButtonTitle": "Clear"
+      }
+    },
+    "tripsPage": {
+      "pageTitle": "Trips Dashboard",
+      "searchTrips": "Search Trips",
+      "tripFilters": [
+        "All",
+        "Completed",
+        "In Progress",
+        "Paused",
+        "Deleted"
+      ],
+      "createTripsButtonTitle": "Create Trips",
+      "tripsTableColumn": [
+        "Trip name",
+        "Status"
+      ],
+      "tripDetails": {
+        "cardTitle": "TRIP DETAILS",
+        "tripNameLabel": "Trip name",
+        "vehicleAssignedLabel": "Vehicle assigned",
+        "toleranceLabel": "Tolerance",
+        "startTimeLabel": "Configured start time",
+        "tripDurationLabel": "Trip duration",
+        "frequencyLabel": "Frequency",
+        "statusLabel": "Status",
+        "endTimeLabel": "Configured end time"
+      },
+      "tripCreation": {
+        "pageTitle": "Trips Creation",
+        "goBackButtonTitle": "Go Back",
+        "bulkCreationButtonTitle": "Bulk Creation",
+        "assignVehicleLabel": "Assign vehicle to this trip",
+        "assignRouteLabel": "Assign route",
+        "assignLabel": "Assign",
+        "assignAndCreateLabel": "Create and Assign",
+        "tripStartTimeLabel": "Trip start time",
+        "tripEndTimeLabel": "Trip end time",
+        "toleranceLabel": "Tolerance",
+        "minutesLabel": "in minutes",
+        "typeOfTripLabel": "Type Of Trip",
+        "scheduleTripLabel": "Do you want to schedule this trip?",
+        "receiveTripLabel": "How do you want to receive alerts? (Optional)",
+        "emailLabel": "Email",
+        "mobileNumberLabel": "Mobile Number",
+        "createTripButtonTitle": "Create Trip"
+      }
+    },
+    "activityPage": {
+      "pageTitle": "Activity Dashboard",
+      "generateButtonTitle": "Generate",
+      "downloadButtonTitle": "Download",
+      "activityTableColumn": [
+        "Vehicle number",
+        "Started at",
+        "Ended at"
+      ],
+      "capturedEvents": {
+        "title": "CAPTURED EVENTS",
+        "distanceCoveredLabel": "Distance covered",
+        "runningTimeLabel": "Running time",
+        "idlingTimeLabel": "Idling time",
+        "haltTimeLabel": "Halt time",
+        "harshAccelerationLabel": "Harsh accelerations",
+        "haltBrakesLabel": "Halt Brakes"
+      }
+    },
+    "fuelDashboardPage": {
+      "pageTitle": "Fuel Dashboard",
+      "fuelConsumptionLabel": "Total Fuel Consumption (L)",
+      "totalFuelPilferageLabel": "Total Fuel Pilferage (L)",
+      "totalFuelRefuelingLabel": "Total Fuel Refueling (L)"
+    },
+    "kmReportPage": {
+      "pageTitle": "KM Report",
+      "frequency": [
+        "DAILY",
+        "MONTHLY"
+      ],
+      "monthlyReportTableColumn": [
+        "Vehicle Number",
+        "Distance (KM)",
+        "Month"
+      ],
+      "dailyReportTableColumn": [
+        "Vehicle Number",
+        "Distance (KM)",
+        "Date"
+      ],
+      "getReportButtonTitle": "Get Report"
+    },
+    "vehiclesPage": {
+      "vehiclesTable": {
+        "cardTitle": "Vehicles",
+        "vehiclesTableColumn": [
+          "Vehicle Number",
+          "Serial Number",
+          "SIM Number",
+          "Vehicle License",
+          "Categories",
+          "Amortization",
+          "Insurance",
+          "Purchase Date"
+        ]
+      },
+      "groupsTable": {
+        "cardTitle": "Groups",
+        "groupsTableColumn": [
+          "Group Names",
+          "Assigned Vehicles",
+          "Created Date"
+        ],
+        "searchGroups": "Search Groups",
+        "groupBulkUploadButtonTitle": "Group Bulk Upload",
+        "groupCreation": {
+          "groupTabTitle": "Create a Group",
+          "cardSearchLabel": "Group Name",
+          "createGroupButtonTitle": "CREATE",
+          "closeButtonTitle": "CLOSE",
+          "groupSuccessMsg": "Group is added successfully!"
+        }
+      }
+    },
+    "driversPage": {
+      "pageTitle": "Drivers",
+      "addDriverButtonTitle": "Add Driver",
+      "driversTableColumn": [
+        "Driver Name",
+        "License Number",
+        "Contact Number",
+        "RFID Number",
+        "Current Vehicle Driven",
+        "Assigned Vehicles",
+        "Driver Score (100)",
+        "Status",
+        "Edit Vehicle"
+      ]
+    },
+    "usersPage": {
+      "pageTitle": "Users & Roles",
+      "users": {
+        "userTabTitle": "Users",
+        "searchUser": "Search User",
+        "newUserButtonTitle": "New User",
+        "userBulkUploadButtonTitle": "User Bulk Upload",
+        "userTableColumn": [
+          "USER NAME",
+          "ASSIGNED ROLE"
+        ]
+      },
+      "roles": {
+        "rolesTabTitle": "Roles",
+        "newRoleButtonTitle": "New Role",
+        "rolesTableColumn": [
+          "ROLE NAME"
+        ]
+      }
+    },
+    "accountPage": {
+      "supportButtonTitle": "Go To Support",
+      "changePasswordButtonTitle": "Change Password",
+      "smsHistoryButtonTitle": "View Sms History",
+      "cardTitles": {
+        "smsBalance": "SMS Balance",
+        "totalDevices": "Total Devices",
+        "registeredDevices": "Registered Devices",
+        "unregisteredDevices": "Unregistered Devices"
+      }
+    }
+  },
+  "French": {
+    "common": {
+      "darkModeLabel": "Thème sombre",
+      "liveAlertsButtonTitle": "Alertes directes",
+      "accountMenu": {
+        "accountMenuLabel": "Compte",
+        "userNameLabel": "Identifiant",
+        "logoutButtonTitle": "Déconnexion"
+      },
+      "dateFilter": {
+        "timeRangeLabel": "Intervalle de temps",
+        "lastHour": "Last Hour",
+        "lastDay": "Hier",
+        "lastWeek": "Semaine dernière",
+        "lastMonth": "Mois dernier",
+        "customRange": "Période personnalisée",
+        "custom": "Personnaliser",
+        "allTime": "Depuis toujours",
+        "timeRange": "Intervalle de temps",
+        "dateRange": "Période",
+        "fromDate": "De",
+        "toDate": "A"
+      },
+      "vehicleNumber": "Immatriculation du véhicule",
+      "lastTracked": "Dernier suivi",
+      "chooseVehicle": "Choisir un véhicule",
+      "searchVehicle": "Rechercher un véhicule",
+      "submitButtonTitle": "Valider"
+    },
+    "mainDashboardPage": {
+      "pageTitle": "Tableau de bord",
+      "vehicleStatsCard": {
+        "details": {
+          "violationTooltipTitle": "Véhicules ayant commit une infraction(excès de vitesse, trajet de nuit ou mauvais itinéraires) dans les 30 dernières minutes",
+          "violation": "EN INFRACTION",
+          "tripsTooltipTitle": "Les voyages progammer qui sont en cours actuellement",
+          "trips": "LES VOYAGES",
+          "parkedOut": "GARER HORS",
+          "parkedIn": "GARER DANS",
+          "parkedOutTooltipTitle": "Véhicules garer hors des surfaces d'interet d'Eneo",
+          "parkedInTooltipTitle": "Véhicules garer dans les surfaces d'interet d'Eneo"
+        },
+        "tracking": {
+          "trackingCardTitle": "Suivis",
+          "trackingTooltipTitle": "Véhicules ayant communiqué dans les 30 dernières minutes",
+          "running": "EN MOUVEMENT",
+          "runningTooltipTitle": "Véhicules roulant à plus de 3Km/h",
+          "idle": "AU RALENTI",
+          "idleTooltipTitle": "Véhicules dont le contact est ouvert mais ne se déplacent pas",
+          "halt": "A L'ARRET",
+          "haltTooltipTitle": "Véhicules à l'arrêt, mais ayant communiqué dans les 30 dernières minutes",
+          "noGps": "PAS DE GPS",
+          "noGpsTooltipTitle": "Véhicules ayant communiqué dans les 30 dernières minutes mais sans une donnée valide"
+        },
+        "nonTracking": {
+          "nonTrackingCardTitle": "Non Suivis",
+          "nonTrackingTooltipTitle": "Véhicules n'ayant pas communiqué depuis au moins 30 minutes",
+          "offline": "HORS LIGNE",
+          "offlineTooltipTitle": "Véhicules n'ayant envoyé aucune donnée depuis au moins 30 minutes",
+          "noData": "PAS DONNEES",
+          "noDataTooltipTitle": "Véhicules n'ayant jamais envoyé des données valides depuis l'installation",
+          "deviceDead": "ETEINT",
+          "deviceDeadTooltipTitle": "Véhicules ayant envoyé leur dernier paquet en étant sur la batterie interne du traqueur"
+        }
+      },
+      "inputFieldPlaceholder": {
+        "searchGroups": "Rechercher des groupes",
+        "searchOnlineVehicles": "Rechercher des véhicules en ligne",
+        "searchNoGpsVehicles": "Rechercher des véhicules NoGPS",
+        "searchRunningVehicles": "Rechercher des véhicules en mouvement",
+        "searchIdleVehicles": "Rechercher des véhicules se déplaçant au ralenti",
+        "searchOfflineVehicles": "Rechercher des véhicules hors ligne",
+        "searchHaltedVehicles": "rechercher des véhicuels à l'arrêt",
+        "searchAllVehicles": "Rechercher tous les véhicules",
+        "searchDeviceDeadVehicles": "Rechercher des véhicules dont les traqueurs sont éteint",
+        "searchTrackingVehicles": "Rechercher des véhicules Suivis",
+        "searchNoDataVehicles": "Rechercher des véhicules sans données",
+        "searchNonTrackingVehicles": "Rechercher des véhicules Non Suivis",
+        "searchVehicles": "Rechercher des véhicules"
+      },
+      "toggleGroupSearch": "Activer la recherche de groupe",
+      "toggleVehicleSearch": "Activer la recherche de véhicules",
+      "groupName": "Nom du groupe",
+      "vehicleAssigned": "Véhicules assignés",
+      "currentTrackingInfo": {
+        "currentTrackingInfoButtonTitle": "Infos suivi actuel",
+        "currentTrackingInfoTitle": "Infos Suivi actuel",
+        "currentTrackingInfoTableColumn": [
+          "Immatriculation",
+          "Date & Heure",
+          "No. de série du traqueur",
+          "No. de téléphone",
+          "IMEI",
+          "No. de la SIM",
+          "Modèle du véhicule",
+          "Vitesse actuelle",
+          "Coordonnées",
+          "Localisation",
+          "Groupe(s)",
+          "Statut du suivi",
+          "Statut de la battérie"
+        ]
+      },
+      "currentSummary": {
+        "currentSummaryButtonTitle": "Synthèse actuelle",
+        "currentSummaryTitle": "Synthèse actuelle",
+        "currentSummaryTableColumn": [
+          "Immatriculation",
+          "Distance",
+          "Heure de départ",
+          "Point de départ",
+          "Dernière communication à",
+          "Dernier point connu",
+          "Vitesse",
+          "Vitesse Max",
+          "Vitesse Moy.",
+          "Adresse de départ",
+          "Dernière adresse connue",
+          "Nom du chauffeur",
+          "Groupe(s)",
+          "Statut du suivi",
+          "Statut de la battérie",
+          "ID Unique"
+        ]
+      },
+      "snapToRoad": {
+        "disabled": "L'alignement sur la route est désactivé",
+        "enabled": "L'alignement sur la route est activé"
+      },
+      "trackingLiveTab": {
+        "tabBarTitle": "Suivi en direct",
+        "vehicleSpeedLabel": "Vitesse (km/h)",
+        "lastTrackedTimeLabel": "Dernier suivi",
+        "locationLabel": "Localisation",
+        "batteryLabel": "Batterie"
+      },
+      "travelReplayTab": {
+        "tabBarTitle": "Relecture du voyage",
+        "startReplayButtonTitle": "Démarrer la relecture",
+        "durationLabel": "Choisissez une période de 24 heures pour la relecture",
+        "finishReplayButtonTitle": "FIN DE RELECTURE"
+      },
+      "deviceOptionButton": {
+        "primaryDeviceButtonTitle": "Traceurs primaires",
+        "secondaryDeviceButtonTitle": "Traceurs secondairesDevice"
+      }
+    },
+    "analyticsPage": {
+      "pageTitle": "Analytics Tableau de bord",
+      "fleetAnalyticsUsage": "Analyse de la flotte et utilisation"
+    },
+    "reportsPage": {
+      "pageTitle": "Rapports",
+      "defaultReportsTitle": "RAPPORTS PAR DEFAUT",
+      "customReportsTitle": "RAPPORTS PERSONNALISES",
+      "newCustomReportButtonTitle": "Nouveau",
+      "reportsViewPage": {
+        "searchVehiclesAndGroups": "Rechercher des véhicules et des groupes",
+        "generateReportButtonTitle": "Générer le rapport",
+        "resetButtonTitle": "Réinitialiser",
+        "backToReportsButtonTitle": "Retour à tous les rapports"
+      }
+    },
+    "alertsPage": {
+      "pageTitle": "Tableau de bord des alertes",
+      "configurationButtonTitle": "Configurations",
+      "alertsTableColumn": [
+        "Date",
+        "Immatriculation",
+        "Localisation",
+        "Valeur",
+        "Latitude",
+        "Longitude"
+      ],
+      "configureAlertsPage": {
+        "pageTitle": "Configurer les alertes",
+        "searchVehiclesAndGroups": "Rechercher des véhicules et des groupes",
+        "enabledVehicleTabTitle": "Véhicules activés",
+        "disabledVehicleTabTitle": "Véhicules désactivés"
+      }
+    },
+    "mobilizePage": {
+      "pageTitle": "Immobiliser ou Mobiliser un Véhicule",
+      "mobilizeButtonTitle": "Mobiliser",
+      "immobilizeButtonTitle": "Immobiliser",
+      "forceMobilizeSwitch": "Forcer la mobilisation",
+      "forceImmobilizeSwitch": "Forcer l'immobilisation",
+      "immobilizeCardTitle": "Choisir le le Véhicule à immobilisé",
+      "mobilizeCardTitle": "Choisir le Véhicule à mobiliser",
+      "commandHistory": {
+        "commandHistoryTitle": "Historisque des commandes",
+        "commandHistoryTableColumn": [
+          "No. de série.",
+          "Immatriculation",
+          "Commande",
+          "Statut",
+          "Dernière mise à jour",
+          "Nom d'utilisateur"
+        ]
+      }
+    },
+    "aoiPage": {
+      "pageTitle": "Points d'intérêt (POI)",
+      "searchAoi": "Rechercher un POI",
+      "createAoiButtonTitle": "Créer un POI",
+      "aoiTableColumn": [
+        "Nom de zone/point",
+        "créé(e) le"
+      ],
+      "aoiDetails": {
+        "cardTitle": "Détails POI",
+        "areaNameLabel": "Nom de zone/point",
+        "areaTypeLabel": "Type de zone/point",
+        "createdOnLabel": "Créé le"
+      },
+      "aoiCreation": {
+        "pageTitle": "AOI Création",
+        "goBackButtonTitle": "Retourner",
+        "bulkCreationButtonTitle": "Création en masse",
+        "chooseGeometryLabel": "Choix géométrique du POI",
+        "markAoiLabel": "Marquer POI à utiliser",
+        "searchPlace": "Rechercher un lieu",
+        "aoiRadiusLabel": "Rayon de la POI",
+        "meterLabel": "Mètres",
+        "viewButtonTitle": "Afficher",
+        "saveButtonTitle": "Enregistrer",
+        "clearButtonTitle": "Efacer"
+      }
+    },
+    "routesPage": {
+      "pageTitle": "Tableau de bord des itinéraires",
+      "searchRoutes": "Rechercher un itinéraire",
+      "createRoutesButtonTitle": "Créer des itinéraires",
+      "routesTableColumn": [
+        "Nom de l'itinéraire",
+        "Créé le"
+      ],
+      "routeDetails": {
+        "cardTitle": "Details des itinéraires",
+        "routeNameLabel": "Nom des itinéraires",
+        "waypointsRegisteredLabel": "Point de passage réenregistrés",
+        "createdOnLabel": "Créé le"
+      },
+      "routeCreation": {
+        "pageTitle": "Création des itinéraires",
+        "goBackButtonTitle": "Retourner",
+        "bulkCreationButtonTitle": "Création en masse",
+        "chooseRouteLabel": "Choisir l'itinéraire à utiliser",
+        "optimizationLabel": "Optimisation",
+        "optimalRouteLabel": "Itinéraire optimal",
+        "routeFenceLabel": "Tampon de l'itinéraire",
+        "choosePlacesLabel": "Choisir des lieux",
+        "meterLabel": "Mètres",
+        "viewButtonTitle": "Afficher",
+        "saveButtonTitle": "Enregistrer",
+        "clearButtonTitle": "Effacer"
+      }
+    },
+    "tripsPage": {
+      "pageTitle": "Tableau de bord des voyages",
+      "searchTrips": "Rechercher un voyage",
+      "tripFilters": [
+        "tous",
+        "Effectués",
+        "En cours",
+        "Pause",
+        "Annulés"
+      ],
+      "createTripsButtonTitle": "Rechercher un voyage",
+      "tripsTableColumn": [
+        "Nom du voyage",
+        "Statut"
+      ],
+      "tripDetails": {
+        "cardTitle": "Détails du voyage",
+        "tripNameLabel": "Nom du voyage",
+        "vehicleAssignedLabel": "Véhicule attribué",
+        "toleranceLabel": "Tolérance",
+        "startTimeLabel": "Heure de début",
+        "tripDurationLabel": "Durée du voyage",
+        "frequencyLabel": "Frequence",
+        "statusLabel": "Statut",
+        "endTimeLabel": "Heure de fin"
+      },
+      "tripCreation": {
+        "pageTitle": "Création des voyages",
+        "goBackButtonTitle": "Retouner",
+        "bulkCreationButtonTitle": "Créeation en masse",
+        "assignVehicleLabel": "Affecter le véhicule à ce voyage",
+        "assignRouteLabel": "Affecter en masse  ",
+        "assignLabel": "Affecter",
+        "assignAndCreateLabel": "Créer et affecter",
+        "tripStartTimeLabel": "Heure de début du voyage",
+        "tripEndTimeLabel": "Heure de fin du voyage",
+        "toleranceLabel": "Tolérance",
+        "minutesLabel": "En minutes",
+        "typeOfTripLabel": "Type de voyage",
+        "scheduleTripLabel": "Voyage récurrent?",
+        "receiveTripLabel": "Comment voulez-vous recevoir les alertes? (Facultatif)",
+        "emailLabel": "Email",
+        "mobileNumberLabel": "No. de téléphone",
+        "createTripButtonTitle": "Créer un voyage"
+      }
+    },
+    "activityPage": {
+      "pageTitle": "Activités du tableau de bord",
+      "generateButtonTitle": "Générer",
+      "downloadButtonTitle": "Télécharger",
+      "activityTableColumn": [
+        " No. du véhicule",
+        "Début à",
+        "Fin à"
+      ],
+      "capturedEvents": {
+        "title": "RESUME DES EVENEMENTS",
+        "distanceCoveredLabel": "Distance couverte",
+        "runningTimeLabel": "Temps de fonctionnement",
+        "idlingTimeLabel": "Temps de ralenti",
+        "haltTimeLabel": "Temps d'arrêt",
+        "harshAccelerationLabel": "Accélérations brusques",
+        "haltBrakesLabel": "Freinages brusques"
+      }
+    },
+    "fuelDashboardPage": {
+      "pageTitle": "Tableau de bord du carburant",
+      "fuelConsumptionLabel": "Consommation totale de carburant (L)",
+      "totalFuelPilferageLabel": "Déversement total de carburant (L)",
+      "totalFuelRefuelingLabel": "Ravitaillement total en carburant (L)"
+    },
+    "kmReportPage": {
+      "pageTitle": "Index Kilométrique",
+      "frequency": [
+        "QUOTIDIENNEMENT",
+        "MENSUEL"
+      ],
+      "monthlyReportTableColumn": [
+        "Immatriculation du véhicule",
+        "Distance (KM)",
+        "Mois"
+      ],
+      "dailyReportTableColumn": [
+        "Immatriculation du véhicule",
+        "Distance (KM)",
+        "Date"
+      ],
+      "getReportButtonTitle": "Obtenir un rapport"
+    },
+    "vehiclesPage": {
+      "vehiclesTable": {
+        "cardTitle": "Véhicules",
+        "vehiclesTableColumn": [
+          "No. du véhicule",
+          "No. de série",
+          "No. de la SIM",
+          "Carte grise",
+          "Catégories",
+          "Amortissement",
+          "Assurance",
+          "Date d'achat"
+        ]
+      },
+      "groupsTable": {
+        "cardTitle": "Groupes",
+        "groupsTableColumn": [
+          "Nom du groupe",
+          "Assigner les véhicules",
+          "Date de création"
+        ],
+        "searchGroups": "Chercher les groupes",
+        "groupBulkUploadButtonTitle": "chargement de groupes en bloc",
+        "groupCreation": {
+          "groupTabTitle": "Créer un groupe",
+          "cardSearchLabel": "Nom du groupe",
+          "createGroupButtonTitle": "CREER",
+          "closeButtonTitle": "FERMER",
+          "groupSuccessMsg": "Groupe créé avec succès!"
+        }
+      }
+    },
+    "driversPage": {
+      "pageTitle": "Chauffeurs",
+      "addDriverButtonTitle": "Ajouter un Chauffeur",
+      "driversTableColumn": [
+        "Nom du Chauffeur",
+        "No. du Permis",
+        "Contact",
+        "No. RFID",
+        "Chauffeur actuel du véhicule",
+        "Véhicules assignés",
+        "Score du Chauffeur (100)",
+        "Statut",
+        "Modifier le véhicule"
+      ]
+    },
+    "usersPage": {
+      "pageTitle": "Utilisateurs & Rôles",
+      "users": {
+        "userTabTitle": "Utilisateurs",
+        "searchUser": "Recherche d'utilisateurs",
+        "newUserButtonTitle": "Nouvel utilisateur",
+        "userBulkUploadButtonTitle": "Création d'utilisateurs en bloc",
+        "userTableColumn": [
+          "NOM D'UTILATEUR",
+          "RÔLE ASSIGNE"
+        ]
+      },
+      "roles": {
+        "rolesTabTitle": "Rôles",
+        "newRoleButtonTitle": "Nouveau Rôle",
+        "rolesTableColumn": [
+          "NOM DU RÔLE"
+        ]
+      }
+    },
+    "accountPage": {
+      "supportButtonTitle": "Aller Au Support",
+      "changePasswordButtonTitle": "Changer le mot de passe",
+      "smsHistoryButtonTitle": "Voir l'historique des SMS",
+      "cardTitles": {
+        "smsBalance": "Balance SMS",
+        "totalDevices": "Total des dispositifs",
+        "registeredDevices": "Dispositifs enregistrés",
+        "unregisteredDevices": "Dispositifs non enregistrés"
+      }
+    }
+  }
+}

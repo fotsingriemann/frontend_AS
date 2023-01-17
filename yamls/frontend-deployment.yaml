@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: admin-react-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: admin-react-app
+  template:
+    metadata:
+      labels:
+        app: admin-react-app
+    spec:
+      containers:
+        - name: admin-react-app
+          image: gcr.io/aquilatrack-5x-dev-demo-test/frontend:1.0.3
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          env:
+            - name: REACT_APP_GOOGLE_MAPS_API_KEY
+              value: 'AIzaSyDVj1RM5nAQI3U_DytvHQLLGL5_Gphokk0'
+            - name: REACT_APP_SERVER_HTTP_URI
+              value: 'https://dev-api.aquilatrack.com/graphql'
+            - name: REACT_APP_SERVER_WS_URI
+              value: 'wss://dev-api.aquilatrack.com'
+            - name: PORT
+              value: '80'
+      restartPolicy: Always

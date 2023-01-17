@@ -1,0 +1,27 @@
+#legend-container {
+  width: 150px;
+  /* height: 50%; */
+  background: rgb(250, 250, 250);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 2px 5px 5px 1px rgba(10, 10, 10, 0.5);
+}
+.legend-title {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 10px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.legend-item-image {
+  width: 30px;
+  height: 15px;
+  margin: 0px 10px;
+}
+.legend-item-text {
+  font-size: 14px;
+}

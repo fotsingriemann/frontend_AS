@@ -1,0 +1,25 @@
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.headerPaper-selected {
+  animation: move 300ms linear forwards;
+}
+
+@keyframes movedown {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.headerPaper-unselected {
+  animation: movedown 300ms linear forwards;
+}

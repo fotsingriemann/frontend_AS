@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: frontend-ingress
+  annotations:
+    kubernetes.io/ingress.class: 'nginx'
+    cert-manager.io/cluster-issuer: 'letsencrypt-aquila-dev'
+spec:
+  tls:
+    - hosts:
+        - dev-admin.aquilatrack.com
+      secretName: letsencrypt-aquila-dev
+  rules:
+    - host: dev-admin.aquilatrack.com
+      http:
+        paths:
+          # The * is needed so that all traffic gets redirected to the nginx box
+          - path:
+            backend:
+              serviceName: admin-react-app
+              servicePort: 80

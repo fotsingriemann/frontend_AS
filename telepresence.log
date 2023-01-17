@@ -1,0 +1,43 @@
+   0.0 TEL | Telepresence 0.104 launched at Wed Apr 29 14:46:48 2020
+   0.0 TEL |   /usr/local/bin/telepresence
+   0.0 TEL | uname: uname_result(system='Darwin', node='iTriangles-MacBook-Air.local', release='18.7.0', version='Darwin Kernel Version 18.7.0: Tue Aug 20 16:57:14 PDT 2019; root:xnu-4903.271.2~2/RELEASE_X86_64', machine='x86_64', processor='i386')
+   0.0 TEL | Platform: darwin
+   0.0 TEL | WSL: False
+   0.0 TEL | Python 3.8.0 (v3.8.0:fa919fdf25, Oct 14 2019, 10:23:27)
+   0.0 TEL | [Clang 6.0 (clang-600.0.57)]
+   0.0 TEL | BEGIN SPAN main.py:40(main)
+   0.0 TEL | BEGIN SPAN startup.py:83(set_kube_command)
+   0.0 TEL | Found kubectl -> /usr/local/bin/kubectl
+   0.0 TEL | [1] Capturing: kubectl config current-context
+   0.5 TEL | [1] captured in 0.47 secs.
+   0.5 TEL | [2] Capturing: kubectl --context gke_aquilatrack-5x-dev-demo-test_asia-south1_aquilatrack-dev-cluster version --short
+   5.5 TEL | [2] captured in 4.94 secs.
+   5.5 TEL | [3] Capturing: kubectl --context gke_aquilatrack-5x-dev-demo-test_asia-south1_aquilatrack-dev-cluster config view -o json
+   5.6 TEL | [3] captured in 0.12 secs.
+   5.6 TEL | [4] Capturing: kubectl --context gke_aquilatrack-5x-dev-demo-test_asia-south1_aquilatrack-dev-cluster get ns default
+  10.3 TEL | [4] captured in 4.67 secs.
+  10.3 TEL | [5] Capturing: kubectl --context gke_aquilatrack-5x-dev-demo-test_asia-south1_aquilatrack-dev-cluster api-versions
+  11.6 TEL | [5] captured in 1.38 secs.
+  11.6 TEL | Command: kubectl 1.17.2
+  11.6 TEL | Context: gke_aquilatrack-5x-dev-demo-test_asia-south1_aquilatrack-dev-cluster, namespace: default, version: 1.14.10-gke.27
+  11.6 TEL | Warning: kubectl 1.17.2 may not work correctly with cluster version 1.14.10-gke.27 due to the version discrepancy. See https://kubernetes.io/docs/setup/version-skew-policy/ for more information.
+  11.6 TEL | END SPAN startup.py:83(set_kube_command)   11.6s
+  11.6 TEL | Found ssh -> /usr/bin/ssh
+  11.6 TEL | [6] Capturing: ssh -V
+  11.7 TEL | [6] captured in 0.05 secs.
+  11.7 TEL | Found bash -> /bin/bash
+  11.7 TEL | Found sshuttle-telepresence -> /usr/local/Cellar/telepresence/0.104/libexec/sshuttle-telepresence
+  11.7 TEL | Found pfctl -> /sbin/pfctl
+  11.7 TEL | Found sudo -> /usr/bin/sudo
+  11.7 TEL | [7] Running: sudo -n echo -n
+  11.9   7 | sudo: a password is required
+  11.9 TEL | [7] exit 1 in 0.17 secs.
+  11.9 TEL | How Telepresence uses sudo: https://www.telepresence.io/reference/install#dependencies
+  11.9 TEL | Invoking sudo. Please enter your sudo password.
+  11.9 TEL | [8] Running: sudo echo -n
+ 337.1 TEL | Keyboard interrupt (Ctrl-C/Ctrl-Break) pressed
+ 337.1 TEL | Exit cleanup in progress
+ 337.1 TEL | (Cleanup) Stop time tracking
+ 337.1 TEL | END SPAN main.py:40(main)  337.1s
+ 337.1 TEL | (Cleanup) Remove temporary directory
+ 337.2 TEL | (Cleanup) Save caches

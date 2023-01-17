@@ -1,0 +1,14 @@
+#traffic-layer-control {
+  height: 40px;
+  width: 40px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+}
+
+.traffic-layer-active {
+  background: rgb(230, 230, 230) !important;
+}

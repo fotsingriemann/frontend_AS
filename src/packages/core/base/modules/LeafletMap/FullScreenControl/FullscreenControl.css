@@ -1,0 +1,27 @@
+.fullscreen-control {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 3px;
+}
+
+.fullscreen-active {
+  background: url('../../../../../common/static/svg/fullscreen-inactive.svg');
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, 0.5);
+}
+
+.fullscreen-inactive {
+  background: url('../../../../../common/static/svg/fullscreen-active.svg');
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, 0.5);
+}
