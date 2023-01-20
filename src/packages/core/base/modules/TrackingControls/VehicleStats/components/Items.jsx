@@ -3,48 +3,40 @@ import Modal from 'react-modal';
 import Tooltip from "@material-ui/core/Tooltip";
 import { Button } from "@material-ui/core";
 import { useEffect, useState } from "react";
+import LoadingSpinner from "../loadingSpinner";
 import '../modal.css'
 import './styles.css'
 const Items = (props) => {
-  // const customStyles = {
-  //   content: {
-  //     top: '50%',
-  //     left: '50%',
-  //     right: 'auto',
-  //     bottom: 'auto',
-  //     marginRight: '-50%',
-  //     transform: 'translate(-50%, -50%)',
-  //     overflowY: "auto",
-  //     opacity: "5",
-  //     width: '60%',
-  //     height: '450px',
-  //     borderRadius: '10px',
-  //     boxShadow: '2xl',
-  //   },
-  //   // overlay: {
-  //   //   backgroundColor: 'black',
-  //   //   color: 'black'
-  //   // }
-  // };
-
-  // const [modalIsOpen, setIsOpen] = React.useState(false);
   const [voitures, setVoitures] = React.useState(null);
+  const [allAreas, setAllAreas] = React.useState(null);
+  const [posArea, setPosArea] = React.useState(null);
+  /////////////////
 
+
+  ///////////////
+
+
+  useEffect(() => {
+    setAllAreas(allAreas)
+    setVoitures(voitures)
+  }, [voitures, allAreas]);
+
+
+  const [isLoading, setIsLoading] = useState(false);
   function setting(vehicle) {
     setVoitures(vehicle)
   }
 
-  // function openModal() {
-  //   setIsOpen(true);
-  // }
+  console.log(voitures)
 
-  // function closeModal() {
-  //   setIsOpen(false);
-  // }
+  function settingAOI(allAreas) {
+    setAllAreas(allAreas)
+  }
 
   useEffect(() => {
     setting(props.vehicle)
-  }, [props.vehicle]);
+    settingAOI(props.allAOI)
+  }, [props.vehicle, props.allAOI]);
 
   const [modal, setModal] = useState(false);
 
@@ -58,55 +50,184 @@ const Items = (props) => {
     document.body.classList.remove('active-modal')
   }
 
+
   return (
     <>
-      {/* <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-      >
-        {voitures ? Object.values(voitures).map((voiture, index) => (
-          <>
-            <h1>{voiture.vehicleNumber}</h1>
-          </>
-        )) : (<h2>No found</h2>)}
-
-        <Button className="bg-green-600" onClick={closeModal}>close</Button>
-      </Modal> */}
-
-      {voitures && console.log(Object.values(voitures))}
 
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
-          <div className="modal-content">
-            <table >
-              <tr>
-                <th>Numero d'immatriculation</th>
-                <th>Speed</th>
-                <th>Address</th>
-                <th>Model</th>
-                <th>Address</th>
-
-              </tr>
-              {voitures ? Object.values(voitures).map((voiture, index) => (
-                <>
-                  <tr>
-                    <td>{voiture.vehicleNumber}</td>
-                    <td>{voiture.speed}</td>
-                    <td>{voiture.address}</td>
-                    <td>{voiture.vehicleModel}</td>
-                    <td>{voiture.vehicleType}</td>
+          <div>
 
 
-                  </tr>
-                </>
-              )) : (<h2>No found</h2>)}
+            <div className="modal-content">
+              <center><h1><span style={{ fontWeight: "bold", color: "red", fontSize: "20px" }}>{props.title}</span></h1></center>
+              <center><h1><span style={{ color: "black", fontSize: "9px" }}>{props.lang}</span></h1></center>
+              <hr></hr>
+              <table id="example" className="display dataTable" style={{ width: "100%" }}>
 
-              {/* <button className="close-modal" onClick={toggleModal}>
-                  CLOSE
-                </button> */}
-            </table>
+                {
+
+                  props.viols ?
+
+                    <>
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Date</th>
+                          <th>VehicleNumber</th>
+                          <th>Location</th>
+                          <th>Alert type</th>
+                          <th>Latitude</th>
+                          <th>Longitude</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {
+
+                          voitures ? Object.values(voitures).map((voiture, index) => (
+                            // voiture.timestamp >= 1674081713 ?
+                            <tr>
+                              <td>{index + 1}</td>
+                              <td>{voiture.to_ts}</td>
+                              <td>{voiture.vehicleNumber}</td>
+                              <td>{voiture.address}</td>
+                              <td>{voiture.alerttype}</td>
+                              <td>{voiture.lat}</td>
+                              <td>{voiture.lng}</td>
+                            </tr>
+                            // : <tr></tr>
+
+                          )) : (<LoadingSpinner />)
+                        }
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>ID</th>
+                          <th>Date</th>
+                          <th>VehicleNumber</th>
+                          <th>Location</th>
+                          <th>Alert type</th>
+                          <th>Latitude</th>
+                          <th>Longitude</th>
+                        </tr>
+                      </tfoot>
+                    </>
+
+
+                    :
+
+                    props.trip ?
+
+                      <>
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>cursor</th>
+                            <th>tripName</th>
+                            <th>places</th>
+                            <th>AreaName</th>
+                            <th>Status</th>
+                            <th>fromTimestamp</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {
+
+                            voitures ? Object.values(voitures).map((voiture, index) => (
+                              // voiture.timestamp >= 1674081713 ?
+                              <tr>
+                                <td>{index + 1}</td>
+                                <td>{voiture.cursor}</td>
+                                <td>{voiture.node.tripName}</td>
+                                <td>{voiture.node.route.places}</td>
+                                <td>{voiture.node.route.areaName}</td>
+                                <td>{voiture.node.status}</td>
+                                <td>{voiture.node.fromTimestamp}</td>
+                              </tr>
+                              // : <tr></tr>
+
+                            )) : (<LoadingSpinner />)
+                          }
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th>ID</th>
+                            <th>cursor</th>
+                            <th>tripName</th>
+                            <th>places</th>
+                            <th>AreaName</th>
+                            <th>Status</th>
+                            <th>fromTimestamp</th>
+                          </tr>
+                        </tfoot>
+                      </>
+
+                      :
+                      <>
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>vehicleNumber</th>
+                            <th>speed</th>
+                            <th>vehicleModel</th>
+                            <th>vehicleType</th>
+                            <th>Timestamp</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {
+                            props.decide ?
+                              voitures ? Object.values(voitures).map((voiture, index) => (
+                                // voiture.timestamp >= 1674081713 ?
+                                <tr>
+                                  <td>{index + 1}</td>
+                                  <td>{voiture.vehicleNumber}</td>
+                                  <td>{voiture.speed}</td>
+                                  <td>{voiture.vehicleModel}</td>
+                                  <td>{voiture.vehicleType}</td>
+                                  <td>{voiture.timestamp}</td>
+                                  <td>{voiture.latitude}</td>
+                                  <td>{voiture.longitude}</td>
+                                </tr>
+                                // : <tr></tr>
+
+                              )) : (<LoadingSpinner />)
+                              :
+                              voitures ? Object.values(voitures).map((voiture, index) => (
+                                voiture.timestamp >= 1674081713 && voiture[props.take] ?
+                                  <tr>
+                                    <td>{index + 1}</td>
+                                    <td>{voiture.vehicleNumber}</td>
+                                    <td>{voiture.speed}</td>
+                                    <td>{voiture.vehicleModel}</td>
+                                    <td>{voiture.vehicleType}</td>
+                                    <td>{voiture.timestamp}</td>
+                                    <td>{voiture.latitude}</td>
+                                    <td>{voiture.longitude}</td>
+                                  </tr>
+                                  : <tr></tr>
+
+                              )) : (<LoadingSpinner />)
+                          }
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th>ID</th>
+                            <th>vehicleNumber</th>
+                            <th>speed</th>
+                            <th>vehicleModel</th>
+                            <th>vehicleType</th>
+                            <th>Timestamp</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                          </tr>
+                        </tfoot>
+                      </>}
+              </table>
+            </div>
           </div>
         </div>
       )}
@@ -127,6 +248,7 @@ const Items = (props) => {
               </div>
             </div>
           </div>
+
         </Tooltip>
 
       </div>

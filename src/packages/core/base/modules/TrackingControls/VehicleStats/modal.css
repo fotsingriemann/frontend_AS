@@ -27,17 +27,17 @@ body.active-modal {
 .modal-content {
   overflow-y: auto;
   position: absolute;
-  top: 40%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   line-height: 1.4;
   background: #f1f1f1;
   padding: 14px 28px;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: black;
   width: 60%;
   text-align: left;
-  height: 400px;
+  height: 500px;
 }
 
 .close-modal {

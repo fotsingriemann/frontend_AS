@@ -61,6 +61,52 @@ const GET_ALL_GROUPS = gql`
   }
 `
 
+const GET_ALL_TRIPS = gql`
+query getAllTrips($clientLoginId: Int!, $status: Int, $uniqueDeviceId: String, $cursor: String, $limit: Int) {
+  getAllTrips(clientLoginId: $clientLoginId, status: $status, uniqueDeviceId: $uniqueDeviceId, cursor: $cursor, limit: $limit) {
+    totalCount
+    edges {
+      cursor
+      node {
+        tripName
+        status
+        fromTimestamp
+        route{
+          areaName
+          places
+        }
+      }
+    }
+  }
+}
+`
+
+
+const GET_ALL_ALERTS = gql`
+  query getAllAlertsByAlertType($clientId: Int!, $alertType: String!, $from: String, $to: String) {
+    getAllAlertsByAlertType(clientLogin: $clientId, alertType: $alertType, from: $from, to: $to) {
+      alerttype
+      alertvalue
+      vehicleNumber
+      to_ts
+      address
+      lat
+      lng
+    }
+  }
+`
+
+
+
+//tous les aoi
+const GET_ALL_AOI = gql`
+query getAllAreaDetails($clientLoginId:Int!) {
+    getAllAreaDetails(clientLoginId: $clientLoginId) {
+      geoJson
+    }
+  }
+`
+
 const GET_DRIVER_DETAILS = gql`
   query getDriverDetails($uniqueDeviceId: String) {
     getDriverDetails(uniqueDeviceId: $uniqueDeviceId) {
@@ -188,6 +234,9 @@ class TrackingControls extends Component {
     snapToRoadToggleScheduled: false,
     selected: [],
     allGroups: [],
+    allAreas: [],
+    allTrips: [],
+    allAlert: [],
     isGroupSearchActive: false,
     selectedGroup: null,
     driverName: null,
@@ -196,6 +245,55 @@ class TrackingControls extends Component {
     fetchedImeiNumber: null,
     fetchedRfidNumber: null,
   }
+
+
+  ///////////////////////////////////
+  getAllAreaDetails = async (clientLoginId) => {
+    let response = await this.props.client.query({
+      query: GET_ALL_AOI,
+      variables: {
+        clientLoginId: clientLoginId,
+        // uniqueDeviceId: '6672462545245456544498',
+      },
+    })
+    if (response.data && response.data.getAllAreaDetails) {
+      this.setState({ allAreas: response.data.getAllAreaDetails })
+    }
+  }
+  //*********************************************************** */
+  getAllTrips = async (clientLoginId, status, uniqueDeviceId, cursor, limit) => {
+    let response = await this.props.client.query({
+      query: GET_ALL_TRIPS,
+      variables: {
+        clientLoginId: 14,
+        status: 4,
+        uniqueDeviceId: null,
+        cursor: null,
+        limit: 50
+      },
+    })
+    if (response.data && response.data.getAllTrips) {
+      this.setState({ allTrips: response.data.getAllTrips })
+    }
+  }
+  //******************************************************************
+
+  getAllAlertsByAlertType = async (clientId, alertType) => {
+    let response = await this.props.client.query({
+      query: GET_ALL_ALERTS,
+      variables: {
+        clientId: 14,
+        alertType: "aoi",
+      },
+    })
+    if (response.data && response.data.getAllAlertsByAlertType) {
+      this.setState({ allAlert: response.data.getAllAlertsByAlertType })
+    }
+  }
+
+
+  /////////////////////////////////
+
 
   getAllGroups = async () => {
     let response = await this.props.client.query({
@@ -1652,6 +1750,9 @@ class TrackingControls extends Component {
     this.setupPolling()
     this.startPolling()
     this.getAllGroups()
+    this.getAllAreaDetails(14)
+    this.getAllTrips(14, 4, null, null, 50)
+    this.getAllAlertsByAlertType(14, "aoi")
   }
 
   componentDidUpdate(prevProps) {
@@ -1659,6 +1760,7 @@ class TrackingControls extends Component {
     if (this.props.primaryChecked !== prevProps.primaryChecked) {
       this.getAllDeviceQuery()
     }
+
   }
 
   componentWillUnmount() {
@@ -1836,6 +1938,9 @@ class TrackingControls extends Component {
       showTrackingStats,
       filteredVehicles,
       vehicles,
+      allAreas,
+      allTrips,
+      allAlert,
       selected,
     } = this.state
 
@@ -1847,6 +1952,9 @@ class TrackingControls extends Component {
           <Grid item xs={12}>
             <VehicleStats
               vehicles={this.state.vehicles}
+              allAreas={this.state.allAreas}
+              allTrips={this.state.allTrips}
+              allAlert={this.state.allAlert}
               markerFilter={markerFilter}
               onMarkerFilterChange={this.handleMarkerFilterChange}
             />

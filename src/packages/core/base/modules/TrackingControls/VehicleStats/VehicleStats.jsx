@@ -7,6 +7,7 @@ import { FaCarSide } from 'react-icons/fa';
 import { AiOutlineCar } from 'react-icons/ai';
 import { MdOutlineCarRepair, MdGpsOff, MdMobiledataOff } from 'react-icons/md';
 import { IoMdBatteryDead } from 'react-icons/io'
+import { RiWifiOffLine } from 'react-icons/ri'
 import { BiTrip } from 'react-icons/bi'
 import { TbCarCrash } from 'react-icons/tb'
 import { HiOutlineBan, HiOutlineCursorClick } from 'react-icons/hi'
@@ -85,7 +86,16 @@ const StatsCards = ({
   markerFilter,
   classes,
   selectedLanguage,
-  vehicle
+  vehicle,
+  parkedIn,
+  parked,
+  allAreas,
+  parkedO,
+  parkedOut,
+  tripsOn,
+  dataTrips,
+  allalert,
+  all_alerts
 }) => useLocation().pathname === "/home/dashboard" ?
     (
       <Grid container spacing={1}>
@@ -320,7 +330,9 @@ const StatsCards = ({
           <Items
             icon={FaCarSide}
             top={running}
+            take="speed"
             vehicle={vehicle}
+            allAOI={allAreas}
             filter="RUNNING"
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
@@ -333,6 +345,9 @@ const StatsCards = ({
           <Items
             icon={AiOutlineCar}
             top={idle}
+            take="idlingStatus"
+            vehicle={vehicle}
+            allAOI={allAreas}
             filter="IDLE"
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
@@ -344,6 +359,9 @@ const StatsCards = ({
           <Items
             icon={MdOutlineCarRepair}
             top={halt}
+            vehicle={vehicle}
+            allAOI={allAreas}
+            take="haltStatus"
             filter="HALT"
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
@@ -355,8 +373,11 @@ const StatsCards = ({
 
 
           <Items
-            icon={MdOutlineCarRepair}
+            icon={MdGpsOff}
             top={nogps}
+            vehicle={vehicle}
+            allAOI={allAreas}
+            take="isNoGps"
             filter="NOGPS"
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
@@ -368,8 +389,11 @@ const StatsCards = ({
 
 
           <Items
-            icon={MdGpsOff}
+            icon={RiWifiOffLine}
             top={offline}
+            vehicle={vehicle}
+            allAOI={allAreas}
+            take="isOffline"
             filter="OFFLINE"
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
@@ -383,6 +407,8 @@ const StatsCards = ({
           <Items
             icon={MdMobiledataOff}
             top={nodata}
+            vehicle={vehicle}
+            allAOI={allAreas}
             filter="NO_DATA"
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
@@ -395,6 +421,8 @@ const StatsCards = ({
           <Items
             icon={IoMdBatteryDead}
             top={devicedead}
+            vehicle={vehicle}
+            allAOI={allAreas}
             filter="DEAD"
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
@@ -406,7 +434,9 @@ const StatsCards = ({
 
           <Items
             icon={TbCarCrash}
-            top={idle}
+            top={allalert}
+            vehicle={all_alerts}
+            viols={true}
             filter="VIOLATION"
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
@@ -418,7 +448,9 @@ const StatsCards = ({
 
           <Items
             icon={BiTrip}
-            top={running}
+            top={tripsOn}
+            vehicle={dataTrips}
+            trip={true}
             filter="ON_TRIPS"
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
@@ -430,8 +462,11 @@ const StatsCards = ({
 
           <Items
             icon={HiOutlineCursorClick}
-            top={running}
+            top={parkedIn}
+            vehicle={parked}
             filter="PARKED_IN"
+            allAOI={allAreas}
+            decide={true}
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
               .vehicleStatsCard.details.parkedInTooltipTitle}
@@ -442,8 +477,11 @@ const StatsCards = ({
 
           <Items
             icon={HiOutlineBan}
-            top={running}
+            top={parkedOut}
+            vehicle={parkedO}
             filter="PARKED_OUT"
+            decide={true}
+            allAOI={allAreas}
             fonct={onMarkerFilterChange}
             lang={languageJson[selectedLanguage].mainDashboardPage
               .vehicleStatsCard.details.parkedOutTooltipTitle}
@@ -490,9 +528,12 @@ StatsCards.propTypes = {
   halt: PropTypes.number.isRequired,
   running: PropTypes.number.isRequired,
   idle: PropTypes.number.isRequired,
+  parked_in: PropTypes.number.isRequired,
+  parked_out: PropTypes.number.isRequired,
   nogps: PropTypes.number.isRequired,
   offline: PropTypes.number.isRequired,
   vehicle: PropTypes.object.isRequired,
+  allAreas: PropTypes.object.isRequired,
 }
 
 const VehicleStats = ({
@@ -500,8 +541,37 @@ const VehicleStats = ({
   onMarkerFilterChange,
   markerFilter,
   vehicles,
+  allAreas,
+  allTrips,
+  allAlert,
   selectedLanguage,
 }) => {
+
+  function deg2rad(angle) {
+    return (Math.PI * angle) / 180;
+  }
+
+
+  function getDistanceFromLatLonInKm(latitude1, longitude1, latitude2, longitude2, units) {
+    var earthRadius = 6371; // Radius of the earth in km
+    var dLat = deg2rad(latitude2 - latitude1);  // deg2rad below
+    var dLon = deg2rad(longitude2 - longitude1);
+    var a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(deg2rad(latitude1)) * Math.cos(deg2rad(latitude2)) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2)
+      ;
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var d = earthRadius * c;
+    var miles = d / 1.609344;
+
+    if (units == 'km') {
+      return d;
+    } else {
+      return miles;
+    }
+  }
+
   const stats = {
     total: 0,
     tracking: 0,
@@ -513,10 +583,61 @@ const VehicleStats = ({
     offline: 0,
     nodata: 0,
     devicedead: 0,
-    vehicle: null
+    parked_in: 0,
+    parked_out: 0,
+    ongoing_trips: 0,
+    allalert: 0,
+    vehicle: null,
+    allAreas: null,
+    all_trips: null,
+    all_alerts: null,
+    parked: [],
+    parkedO: []
+
   }
+
+  if (allAlert) {
+    console.log(allAlert)
+    stats.allalert = allAlert.length
+    stats.all_alerts = allAlert
+  }
+
+  if (allTrips) {
+    // console.log(allTrips)
+    stats.all_trips = allTrips.edges
+    stats.ongoing_trips = allTrips.totalCount
+  }
+
+
   if (vehicles) {
     stats.vehicle = vehicles
+    if (allAreas) {
+      stats.allAreas = allAreas
+      Object.values(allAreas).forEach((area) => {
+        let r1 = JSON.parse(area.geoJson)
+
+        Object.values(vehicles).forEach((voiture) => {
+          // console.log(voiture)
+          // voiture.timestamp >= 1674081713 && 
+          if (voiture.timestamp >= 1674081713 && r1.type == "Circle" && getDistanceFromLatLonInKm(r1.coordinates[0], r1.coordinates[1], voiture.latitude, voiture.longitude, 'm') <= r1.radius) {
+            if (!stats.parked.includes(voiture)) {
+              stats.parked.push(voiture)
+              stats.parked_in++
+            }
+          }
+        })
+      })
+
+    }
+
+    if (stats.parked_in > 0 && stats.parked.length > 0) {
+      Object.values(vehicles).forEach((vehicle) => {
+        if (vehicle.timestamp >= 1674081713 && !stats.parked.includes(vehicle)) {
+          stats.parkedO.push(vehicle)
+          stats.parked_out++
+        }
+      })
+    }
 
 
     Object.values(vehicles).forEach((vehicle) => {
@@ -564,6 +685,15 @@ const VehicleStats = ({
       markerFilter={markerFilter}
       selectedLanguage={selectedLanguage}
       vehicle={stats.vehicle}
+      parkedIn={stats.parked_in}
+      parked={stats.parked}
+      parkedO={stats.parkedO}
+      parkedOut={stats.parked_out}
+      tripsOn={stats.ongoing_trips}
+      allAreas={stats.allAreas}
+      allalert={stats.allalert}
+      all_alerts={stats.all_alerts}
+      dataTrips={stats.all_trips}
     />
   )
 }
